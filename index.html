@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inicio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="img/favicon.icon" type="image/x-icon">
+        <link rel="stylesheet" href="Recursos/details-shim.min.css"><!--Cajas html5-->
+        <script src="Recursos/details-shim.min.js"></script><!--Cajas html5-->
+        <script src="Recursos/jquery.min.js"></script><!--ESTO ES PARA PODER UTILIZAR LOS PLUGLINS DE Jquery-->
+        <script src="Recursos/jquery_cycle.js"></script><!--Plugin de la galeria-->
+        <script> //Galeria medieval
+            $('#fotos').cycle({ 
+            fx: 'cover',
+            speed: 1000, 
+            timeout: 2000, 
+            pause: true
+        });
+        </script>
+        <script> //Galeria deportiva
+            $('#fotos2').cycle({ 
+            fx: 'scrollVert',
+            speed: 1000, 
+            timeout: 2000, 
+            pause: true
+        });
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <header>
+                <div class="titulo">
+                    <h1>Londr<span>es</span></h1>
+                    <P><span>"El Gran </span>Londres"</P>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="estoyAca">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="lugares.html">Tour Destacado</a>
+                        </li>
+                        <li>
+                            <a href="eventos.html">Proximos Eventos</a>
+                        </li>
+                        <li>
+                            <a href="form.html">Contactanos</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </header>
+                <main>
+                    <h2>Londinense por un dia</h2>
+                    <p>
+                        Londres,<strong> la capital de Inglaterra y del Reino Unido, es una ciudad del siglo <abbr title="veintiuno">XXI</abbr> con una 
+                        historia que se remonta a la época romana. lugar de las coronaciones monárquicas británicas, 
+                        historias increíbles, equipos multicampeones, museos con algunas de las mejores atracciones a 
+                        nivel mundial, todo eso vestido con una increíble y heterogénea arquitectura que te hará viajar 
+                        a través de las épocas por las que la ciudad ha transcurrido.</strong> <br/>
+                        Nosotros estamos para que puedas conocer Londres en sus múltiples y fascinantes facetas <em>de la 
+                        mano de los mejores guías turísticos de habla hispana te presentamos los paquetes  
+                        que tenemos a tu disposicion:</em>
+                    </p>
+                        <article class="medieval">
+                            <h3 class="h3-index">Descubre la cara medieval de las capital británica</h3>
+                            <p>
+                                Llegaremos al Puente de Londres para admirar cómo el Támesis discurre por la ciudad. 
+                                ¡Es uno de los monumentos más visitados! Continuaremos hasta el <span lang="en">Tower Bridge</span> para descubrir una de las panorámicas 
+                                más especiales de la capital. ¡Os enamoráis de las vistas!
+                               <strong> Caminando por las callejuelas de la City reviviremos los orígenes de <span lang="la">"Londinium"</span> y nos empapamos del ambiente de la 
+                                zona. La arquitectura tradicional de estas calles crea una atmósfera que nos transportará al pasado.</strong>
+                                Finalmente, llegaremos al punto más alto de la ciudad: la colina <span lang="en">Ludgate</span> . En ella se encuentra la emblemática 
+                                Catedral de San Pablo. 
+                            </p>
+                            <div id="fotos">
+                                <img src="img/img-tour1/puente1.png" alt="vista a nivel del rio del london bridge">
+                                <img src="img/img-tour1/puente-torre.jpg" alt="vista del london bridge con un amanecer y el the shard de fondo">
+                                <img src="img/img-tour1/sanPablo.jpg" alt="imagen de la catedral de san pablo">
+                            </div>
+                        </article>
+                        <article class="deportivo">
+                            <h3 class="h3-index">Tour Deportivo</h3>
+                            <p>
+                               <strong> El país que vio el surgimiento del deporte rey, tiene en su capital una de las mayores conglomeraciones de 
+                                equipos multi campeones en fútbol y rugby, estadios espectaculares, el mítico Wembley y uno de los torneos de 
+                                tenis más prestigiosos a nivel mundial.
+                                No hace falta seguir destacando la historia y  el presente deportivo de la única ciudad que fue sede de los 
+                                juegos olímpicos en tres ocasiones.</strong>
+                               <em> el recorrido comienza con la visita a los estadios de los 4 principales equipos de la ciudad (<span lang="en">Arsenal, Chelsea, Tottenham y West Ham</span>),
+                                continuamos con las instalaciones de <span lang="en">wimbledon</span> y finalizamos el recorrido adentrandonos en profundidad en el estadio de Wembley.</em>
+                            </p>
+                                <div id="fotos2">
+                                    <img src="img/img-tour2/arsenal1.jpg" alt="frente del estadio del arsenal con una estatua arrodillada mirandolo">
+                                    <img src="img/img-tour2/chelsea2.jpg" alt="frente y boleteria del estadio del chelsea">
+                                    <img src="img/img-tour2/wimbledon2.jpg" alt="dos personas peloteando en una cancha de cesped en wimbledon">
+                                </div>
+                        </article>
+                        <article class="potter">
+                            <h3 class="h3-index">Tour Harry Potter</h3>
+                            <p>
+                                Explora los secretos de una de las más exitosas sagas de todos los tiempos.<strong> Este tour te lleva a conocer el 
+                                detrás de escena y presenta una increíble variedad de sets, trajes y accesorios. Aprende sobre algunos secretos 
+                                muy bien guardados, que hacen que esta saga sea tan popular en el mundo.</strong> aprende cómo se crearon las criaturas 
+                                con efectos especiales, animatrónicos y modelos reales; explora otros sets memorables de las películas, 
+                                incluyendo la sala común de Gryffindor, el dormitorio de chicos, la cabaña de Hagrid, la clase de pociones y la 
+                                oficina del Professor Umbridge en el Ministerio de la Magia
+                            </p>
+                            <div>
+                                <iframe width="400" height="225" src="https://www.youtube.com/embed/ae55HsiXjik" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </article>
+                        <article class="tripitas">
+                            <h3 class="h3-index">Ruta de Jack el Destripador</h3>
+                            <p>
+                                Todo comenzó el 31 de agosto de 1888, cuando un hombre que caminaba por un callejón oscuro vio un bulto tirado 
+                                en el suelo junto a unas puertas, su curiosidad reveló una prostituta asesinada... Así comienza la historia de 
+                                Jack el Destripador, uno de los asesinos más sangrientos de la historia. <br/>
+                               <strong> Durante este tour conocerás la historia completa recorriendo el escenario donde sucedió todo. Nuestra ruta de 
+                                Jack el Destripador comenzará junto a <span lang="en">Whitechapel Gallery</span> y finalizará en las inmediaciones de <span lang="en">Spitalfields 
+                                    Market</span>, a pocos metros de la estación de metro <span lang="en">Liverpool Street</span>.</strong>
+                            </p>
+                            <picture>
+                                <source media="(max-width: 800px )" srcset="img/tripitas2-tablet.jpg" type="image/jpg">
+                                <img src="img/tripitas2.jpg" alt="jack el destripador sosteniendo un cuchillo sobre una mujer, mientras la misma grita desesperadamente">
+                            </picture>
+                                
+                        </article>
+                        <article class="privado">
+                            <h3 class="h3-index">Tour destacado</h3>
+                            <p>
+                               <em>¿Vienes a Londres de viaje y quieres conocer la ciudad junto a tu familia o amigos? ¿Dispones de poco tiempo y 
+                                quieres aprovechar al máximo tu visita londinense? ¿Te gustaría vivir una experiencia inolvidable?</em>  <br/> Con nuestro 
+                                Tour Privado por Londres en español podrás descubrir la ciudad a tu manera, con un tour totalmente personalizado y un guía exclusivo para ti y tu familia o grupos de amigos. 
+                                Personaliza tu viaje y disfruta de una aventura inigualable por la capital londinense. 
+                                En esta modalidad de tour, tú mandas. Nuestro guía en español os recogerá en vuestro hotel o lugar elegido 
+                                dentro de la zona 1 de Londres, y os acompañará en vuestro <strong>itinerario creado a medida según vuestros gustos y 
+                                preferencias. Será una experiencia única, en la que también aprenderás sobre la historia de la ciudad y sus 
+                                secretos y anécdotas más interesantes.</strong>
+                            </p>
+                            <a href="lugares.html">Mas Info</a>
+                        </article>
+                </main> <!--Fin container-->
+        <aside>
+           <h2>Proximos Eventos</h2>
+            <ul>
+                <li>
+                    <a href="eventos.html#wimbledon" class="noticia">Preparate para vivir wimbledon</a>
+                </li>
+                <li>
+                    <a href="eventos.html#starWars" class="noticia1">La convencion mas grande sobre <span lang="en">star Wars</span> llega a londres</a>
+                </li>
+                <li>
+                    <a href="eventos.html#coco" class="noticia2">Coco Chanel llega al <span lang="en">Victoria & Albert Museum</span></a>
+                </li>
+            </ul>
+        </aside>
+        <footer>
+                    <h2>Visita Londres</h2>
+                   <p>Este sitio es una entrega para un trabajo practico de primer cuatrimestre de la Escuela Da vinci 2022
+                        para la docente: Mabel Garcia  en la materia de: Maquetado y Desarrollo Web</p>
+                    <ul class="redes">
+                        <li>
+                            <a href="http://instagram.com" target="_blank" class="insta">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/login/es" target="_blank" class="linke">Linkeding</a>
+                        </li>
+                        <li>
+                            <a href="http://youtube.com" target="_blank" class="yout">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="mailto:jonathan.bartoloni@davinci.edu.ar" class="email">Email</a>
+                        </li>
+                    </ul>
+                <p>Copyright &copy; 2022, por Abraham Bartoloni</p>
+        </footer>
+        
+    </body>
+</html>

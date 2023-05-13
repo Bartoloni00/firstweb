@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="stylesheet" href="Recursos/details-shim.min.css"><!--Cajas html5-->
+        <script src="Recursos/details-shim.min.js"></script><!--Cajas html5-->
+        <link rel="stylesheet" href="Recursos/jquery-ui.css" /><!--eliminar este y la linea de arriba para que el form me lleve a una pagina de agradecimiento-->
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="shortcut icon" href="img/favicon.icon" type="image/x-icon">
+    </head>
+    <body>
+            <header>
+                <div class="titulo">
+                    <h1>Londr<span class="h1">es</span></h1>
+                    <P><span>"El Gran </span>Londres"</P>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="lugares.html">Tour Destacado</a>
+                        </li>
+                        <li>
+                            <a href="eventos.html">Proximos Eventos</a>
+                        </li>
+                        <li>
+                            <a href="form.html" class="estoyAca">Contactanos</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </header>
+                <main class="contenedor form">
+                  <form method="get" enctype="application/x-www-form-urlencoded" action="gracias.html"> 
+                    <fieldset>
+                        <legend>Datos de la persona que realiza la reserva</legend>
+                       <div>
+                        <input type="text" name="Nombre y apellido" class="input-text" placeholder="Ingrese su Nombre y Apellido">
+                        <input type="email" name="Email" required  class="input-text" placeholder="Ingrese su Email">
+                        <div class="adultos">
+                            <span>¿Cuantos adultos seran?</span>
+                            <select name="adultos" id="adultos">
+                                <option value="1" selected="">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                        </div>
+                        <div class="menores">
+                            <span>Cantidad de menores de 18 años</span>
+                            <select name="menores" id="menores">
+                                <option value="0" selected="">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                        </div>
+                        
+                       </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Datos del Tour elegido</legend>
+                        <span>Fecha en la que solicita el Tour</span>
+                        <input type="date" name="fecha" min="2022-06-15" max="2023-07-01" class="fecha">
+                        <div class="radio">
+                            <span>Tour seleccionado:</span>
+                            <input  class="radio_input" type="radio" value="option1" name="myRadio" id="Destacado" required/>
+                            <label class="radio_label" for="Destacado">Destacado</label>
+                    
+                            <input  class="radio_input" type="radio" value="option2" name="myRadio" id="Londres-Medieval" required/>
+                            <label class="radio_label" for="Londres-Medieval">Londres Medieval</label>
+                    
+                            <input  class="radio_input" type="radio" value="option3" name="myRadio" id="Jack" required/>
+                            <label class="radio_label" for="Jack">Jack "El Destripador"</label>
+                            
+                            <input  class="radio_input" type="radio" value="option4" name="myRadio" id="Harry-Potter" required/>
+                            <label class="radio_label" for="Harry-Potter">Harry Potter</label>
+                    
+                            <input  class="radio_input" type="radio" value="option5" name="myRadio" id="Deportivo" required/>
+                            <label class="radio_label" for="Deportivo">Deportivo</label>
+                        </div>
+                        <div class="radio">
+                            <label class="checkbox_label" for="acepto">Acepto los términos y condiciones</label>
+                            <input  class="checkbox_input" type="checkbox" value="si" name="acepto" id="acepto" required checked/>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Reservar" id="envio">
+                  </form>
+
+                </main> <!--Fin container-->
+        <footer>
+                    <h2>Visita Londres</h2>
+                   <p>Este sitio es una entrega para un trabajo practico de primer cuatrimestre de la Escuela Da vinci 2022
+                        para la docente: Mabel Garcia  en la materia de: Maquetado y Desarrollo Web</p>
+                    <ul class="redes">
+                        <li>
+                            <a href="http://instagram.com" target="_blank" class="insta">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/login/es" target="_blank" class="linke">Linkeding</a>
+                        </li>
+                        <li>
+                            <a href="http://youtube.com" target="_blank" class="yout">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="mailto:jonathan.bartoloni@davinci.edu.ar" class="email">Email</a>
+                        </li>
+                    </ul>
+                <p>Copyright &copy; 2022, por Abraham Bartoloni</p>
+        </footer>
+        
+    </body>
+</html>

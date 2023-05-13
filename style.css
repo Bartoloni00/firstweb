@@ -1,0 +1,845 @@
+/*-------------Estilos Globales*/
+:root{
+    --colorAzul:#01226f;
+    --colorRojo:#be021b;
+    --anchoPag: 1280px;
+    --anchoMain: 1024px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    width: var(--anchoPag);
+    margin: 30px auto 30px auto;
+    -webkit-box-shadow: 10px 10px 30px #777,-10px -10px 30px #777;
+       -moz-box-shadow: 10px 10px 30px #777,-10px -10px 30px #777;
+            box-shadow: 10px 10px 30px #777,-10px -10px 30px #777;
+}
+@media screen and (max-width: 800px){/*modifico el body de las 4 paginas*/
+    body{
+        width: 800px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px){/*modifico el body de las 4 paginas*/
+    body{
+        width: 480px;
+        margin: 0;
+    }
+}
+em{
+    font-style: normal;
+}
+/*--------------------TITULO--------------------*/
+h1 {
+    text-transform: uppercase;
+    height: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-align: center;
+    width: 751px;
+    margin: auto;
+    color: #be021b;
+    letter-spacing: 5px;
+}
+.titulo span{
+    color: #01226f;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.titulo {
+    width: 1280px;
+    margin: auto;
+    background-color: #e9eaec;
+    border: solid 2px #01226f;
+    border-bottom: none;
+    background-image: url(Background/london-largo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.titulo p{
+    color: #be021b;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-align: right;
+    padding-right: 70px;
+    width: 1280px;
+    margin: auto;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 800px){/*Modifico el titulo*/
+    h1 {
+        height: 150px;
+        width: 800px;
+    }
+    .titulo {
+        width: 800px;
+        background-image: url(Background/london-largo-mobile.png);/*redimencionar esto*/
+    
+    }
+    .titulo p{
+        padding-right: 0px;
+        width: 800px;
+        margin-top: 50px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 480px){/*Modifico el titulo*/
+    h1 {
+        width: 480px;
+    }
+    .titulo {
+        width: 480px;
+    }
+    .titulo p{
+        width: 480px;
+        text-align: center;
+    }
+}
+/*--------------Barra de Navegacion--------------*/
+    nav{
+        margin: auto;
+        width: var(--anchoPag);
+        background-color: var(--colorAzul);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    ul{
+        list-style: none;
+    }
+    nav li a{
+        background-color: var(--colorAzul);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 72px;
+        display: block;
+        -webkit-transition:all 1s;
+        -o-transition:all 1s;
+        -moz-transition:all 1s;
+        transition: all 1s;
+    }
+    nav>ul>li{
+       display: inline-block;
+    }
+    nav li a:hover{
+        -webkit-border-radius: 50px 0;
+           -moz-border-radius: 50px 0;
+                border-radius: 50px 0;
+        background-color: var(--colorRojo);
+        -webkit-transform: translateY(-5px);
+           -moz-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+             -o-transform: translateY(-5px);
+                transform: translateY(-5px);
+    }
+    nav li ul{
+        display: none;
+        position: absolute;
+        min-width: 140px;
+    }
+    nav li:hover >ul{
+        display: block;
+    }
+    .estoyAca{
+        background-color: var(--colorRojo);
+    }   
+    @media screen and (max-width: 800px){
+        nav{
+            width: 800px;
+        }
+        nav ul{
+            margin: 0;
+        }
+        nav li a{
+            padding: 15px 8px;
+        }
+    }
+    
+    @media screen and (max-width: 480px){
+        nav{
+            width: 480px;
+            font-size: 15px;
+        }
+        nav ul{
+            margin: 0;
+        }
+    }
+/*-----------------------contenido principal------------*/
+    main{
+        display: inline-block;
+        width: var(--anchoMain);
+        background-color: #ffffffee;
+    }
+    @media screen and (max-width: 800px){
+        main{
+            display: block;
+            width: 800px;
+        }
+    }
+    @media screen and (max-width: 480px){
+        main{
+            width: 480px;
+        }
+    }
+    .contenedor{  /*MAIN DE FORM Y EVENTOS*/
+        width: var(--anchoPag);
+    }
+    @media screen and (max-width: 800px){/*modifico el main de form y eventos*/
+        .contenedor{
+            width: 800px;
+        }
+    }
+    @media screen and (max-width: 480px){/*modifico el main de form y eventos*/
+        .contenedor{
+            width: 480px;
+        }
+    }
+    
+    main>p, .privado p,/*Index*/ 
+    #wimbledon p, #coco p, #starWars p /*Noticias*/{ 
+        margin: 0 40px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+    }
+    .lugares ol li p:first-letter, 
+    #wimbledon p:first-letter, #coco p:first-letter, #starWars p:first-letter /*Noticias*/
+    {
+        font-size: 20px;
+        color:var(--colorRojo);                   
+        font-weight: 900;
+        text-transform: capitalize;
+    }
+    .medieval p ,.potter p{
+            width: 480px;
+            float: left;
+            margin: 0 20px 20px 60px;
+            line-height: 1.5em;
+            letter-spacing: 1px;
+    }
+
+    .potter p{
+        margin: 20px 20px 15px 60px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+    }
+    .deportivo p, .tripitas p{
+        width: 480px;
+        float: right;
+        margin: 0 50px 20px 0;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+    }
+
+   /* -----------------------------------------------------------------------------------------------------------------------------------------*/
+    @media screen and (max-width: 800px){
+        .medieval p ,.potter p,.deportivo p, .tripitas p{
+            width: 400px;
+            display: inline-block;
+            margin: 0px 20px;
+            padding: 10px;
+        }
+        article{
+            display: block;
+        }
+    }
+    @media screen and (max-width: 480px){
+        .medieval p ,.potter p,.deportivo p, .tripitas p{
+            width: 440px;
+            float: none;
+            display: inline-block;
+            margin: 0px 20px;
+            padding: 10px;
+        }
+    }
+    .privado a{
+            display: block;
+            width: 120px;
+            height: 35px;
+            background-color: var(--colorRojo);
+            text-align: center;
+            padding-top: 5px;
+            -webkit-border-radius: 30px;
+               -moz-border-radius: 30px;
+                    border-radius: 30px;
+            border: 1px solid var(--colorAzul);
+            margin: 20px auto;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+    }
+    .privado a:hover{
+        -webkit-transform: rotate(15deg);
+           -moz-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+             -o-transform: rotate(15deg);
+                transform: rotate(15deg);
+
+    }
+    /*Iframes*/
+    iframe{
+        border: 2px solid var(--colorAzul);
+        margin-top: 40px;
+    }
+    .eventos iframe{
+        width:560px;
+        height:315px;
+        margin:auto 320px auto 320px;
+        border: 2px solid var(--colorAzul)
+    }
+    @media screen and (max-width: 480px) {
+        iframe{
+            margin: 10px 40px;
+        }
+        .eventos iframe{
+            width: 480px;
+            margin: 0;
+        }
+    }
+    h2{
+        text-align: center;
+        border-bottom: solid 1px #000;
+        width: 700px;
+        margin: auto;
+        padding-top: 40px;
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+
+    .h3-index{
+        padding-top: 20px;
+        margin: 20px auto 15px auto;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    @media screen and (max-width: 480px){
+        h2{
+            width: 350px;
+        }
+    }
+    
+    /*--------------------------------------imagenes--------------------------------------------------*/
+    #fotos,#fotos2,.tripitas img{
+        position:  relative;
+        width: 400px;
+        height: 266px;
+        margin: 20px auto auto 60px;
+        border: 2px solid var(--colorAzul)
+    }
+    @media screen and (max-width: 800px){
+        #fotos,#fotos2,.tripitas img{
+            margin: 50px 5px 85px 5px;
+            width: 350px;
+        }
+        .potter iframe{
+            width: 350px;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        #fotos,#fotos2,.tripitas img{
+            margin: 15px 40px;
+            width: 400px;
+        }
+        .potter iframe{
+            width: 400px;
+            margin-bottom: 0px;
+        }
+    }
+
+    /*--------------------------------------------------Lugares----------------------------*/
+    
+    .lugares{
+        width: 960px;
+        margin-left: 80px;
+    }
+    .lugares ol li p {
+        margin: 20px;
+        line-height: 1.5em;
+        letter-spacing: 1px;
+    }
+    .lugares h3{
+        text-transform: capitalize;
+        margin: 10px auto auto 20px;
+        letter-spacing: 3px;
+    }
+    .lugares li{  
+        width: 1000px;
+        float: right;
+    }
+    .lugares img{
+        float: right;
+        margin-right: 20px;
+        border: 2px solid var(--colorAzul);
+    }
+    #Westminster img , #wembley img{
+        margin-right: 240px;
+    }
+
+    @media screen and (max-width: 800px) {
+       
+        .lugares{
+            width: 700px;
+        }
+        .lugares li{  
+            width: 700px;
+            float: none;
+        }
+        #Westminster img , #wembley img{
+            margin-right: 140px;
+        }
+        .lugares img{
+            float: none;
+            margin: 0 20px 0 70px;
+        }
+        }
+    @media screen and (max-width: 480px) {
+           
+    .lugares{
+        width: 480px;
+        margin: auto;
+    }
+    .lugares li{  
+        width: 480px;
+        float: none;
+        margin-top: 30px;
+    }
+    .lugares img{
+        float: none;
+        margin: 0;
+    }
+    #Westminster img , #wembley img{
+        margin: 0;
+    }
+
+    }
+    /*-----------------------------------------------------Eventos------------------------------------*/
+    .eventos h3{
+        text-align: center;
+        width: 220px;
+        margin:auto auto 10px auto;
+        border-bottom: 1px dashed var(--colorRojo);
+    }
+    .eventos img{
+        display: block;
+        margin: 10px auto auto auto;
+        border: 2px solid var(--colorAzul);
+    }
+    .background1, .background2 {
+        width: 1200px;
+        height: 315px;
+        margin: 15px auto auto auto;
+        border:1px solid black;
+        border: 2px solid var(--colorAzul);
+        background-repeat: no-repeat;
+        background-image: url(Background/back.jpg);
+    }
+    .background1{
+        background-position: initial;
+    }
+    .background2{
+        background-position: 0px -315px;
+    }
+    @media screen and (max-width: 800px){
+        .background1, .background2{
+            width: 800px;
+            background: none;
+            border: none;
+        }
+        .eventos iframe{
+            margin: auto 120px auto 120px;
+        }
+    }
+    @media screen and (max-width: 480px){
+        .background1, .background2{
+            width: 480px;
+            background: none;
+            border: none;
+        }
+        .eventos iframe{
+            margin: 0;
+        }
+    }
+    /*---------------------------------------------FORMULARIO------------------------------------------------*/
+    .form{
+        background: url(Background/superBack.jpg) no-repeat;
+        color:#fff;
+        text-shadow: 15px 15px 15px 5px rgba(0, 0, 0, 0.3);
+    }
+    .form span{
+        margin-left: 20px;
+    }
+    input{
+        display:block;
+        margin: auto;
+        width: 250px;
+        height: 25px;
+    }
+    .input-text{
+        margin-bottom: 15px;
+    }
+    label{
+        display: block;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    form{
+        width:500px;
+        margin:20px auto 0px auto;
+    }
+    fieldset{
+        margin:20px auto;
+        -webkit-box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.3);
+           -moz-box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.3);
+                box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.3);
+        padding-bottom: 25px;
+        background-color: #0009;
+    }
+    fieldset legend{
+        text-align: center;
+        background-color: var(--colorAzul);
+        border: 1px solid rgb(255, 255, 255);
+        color:  rgb(255, 255, 255);
+        height: 30px;
+        width: 340px;
+        -webkit-border-radius: 50px 0;
+           -moz-border-radius: 50px 0;
+                border-radius: 50px 0;
+        margin-bottom: 20px;
+        padding-top: 5px;
+        margin-left: 30px;
+    }
+    .fecha{
+        width: 125px;
+        height: 30px;
+        padding-left: 5px;
+        display: inline;
+        margin-left: 20px;
+      }
+    #envio{
+        width: 155px;
+        height: 50px;
+        font-size: 22px;
+        margin: 20px auto 20px auto;
+        text-transform: uppercase;
+        background-color: var(--colorRojo);
+        color:  rgb(255, 255, 255);
+        -webkit-border-radius: 50px 0;
+           -moz-border-radius: 50px 0;
+                border-radius: 50px 0;
+        -webkit-transition:all 1s;
+        -o-transition:all 1s;
+        -moz-transition:all 1s;
+        transition: all 1s;
+    }
+    #envio:hover{
+        -webkit-transform: rotate(-20deg);
+           -moz-transform: rotate(-20deg);
+            -ms-transform: rotate(-20deg);
+             -o-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+        filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1.7870000000000001 -0.715 -0.072 0 0 -0.213 1.305 -0.072 0 0 -0.213 -0.715 1.9280000000000002 0 0 0 0 0 1 0" /></filter></svg>#filter');
+        -webkit-filter: saturate(2);
+                filter: saturate(2);
+    }
+    .radio{
+        padding-right: 20px;
+        margin-top: 20px;
+    }
+
+    .radio > span{
+        margin-left: 170px;
+    }
+    .radio_label{
+        padding: 8px 14px;
+        font-size: 14px;
+        color: #fff;
+        background-color: var(--colorAzul);
+        cursor: pointer;
+        transition: background 0.1s;
+    }
+    .checkbox_label{
+        margin-left: 120px;
+    }
+    .radio_input{
+        height: 25px;
+    }
+    .checkbox_input{
+        margin-left: 110px;
+    }
+    .radio_input:checked + .radio_label{
+        background-color: var(--colorRojo);
+    }
+    .adultos{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 480px){
+        form{
+            width: 480px;
+        }
+    }
+    /*---------------Barra de NOTICIAS------------*/
+aside{
+    float: right;
+    top: 0;
+    margin-bottom: 246px;
+    width: 256px;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    border-left: 1px solid rgb(200, 200, 200);
+}
+aside h2{
+    font-size: 25px;
+    width: 200px;
+    padding-top: 10px;
+}
+aside a{
+    display: inline-block;
+    background: no-repeat rgba(200, 200, 200, .7) bottom;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    width: 255px;
+    height: 178px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.8426 0.14300000000000002 0.014399999999999996 0 0 0.0426 0.951 0.014399999999999996 0 0 0.0426 0.14300000000000002 0.8144 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: saturate(0.8);
+            filter: saturate(0.8);
+    -webkit-transition:all .5s;
+    -o-transition:all .5s;
+    -moz-transition:all .5s;
+    transition: all .5s;
+}
+aside a:hover{
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1.3935000000000002 -0.35750000000000004 -0.03599999999999999 0 0 -0.10650000000000001 1.1575 -0.03599999999999999 0 0 -0.10650000000000001 -0.35750000000000004 1.4640000000000002 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: saturate(1.5);
+            filter: saturate(1.5);
+    -webkit-transform: translateX(-10px);
+       -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+         -o-transform: translateX(-10px);
+            transform: translateX(-10px);
+}
+.noticia{
+    background-image: url(img-noticias/wimbledon.jpg);
+    margin: 0;
+    height: 191px;
+
+}
+.noticia1{
+    background-image: url(img-noticias/starWars.jpg);
+}
+.noticia2{
+    background-image: url(img-noticias/coco2.jpg);
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.8" intercept="0.09999999999999998" /><feFuncG type="linear" slope="0.8" intercept="0.09999999999999998" /><feFuncB type="linear" slope="0.8" intercept="0.09999999999999998" /></feComponentTransfer></filter></svg>#filter');
+    -webkit-filter: contrast(0.8);
+            filter: contrast(0.8);
+}
+.noticia2:hover{
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.2" intercept="-0.09999999999999998" /><feFuncG type="linear" slope="1.2" intercept="-0.09999999999999998" /><feFuncB type="linear" slope="1.2" intercept="-0.09999999999999998" /></feComponentTransfer></filter></svg>#filter');
+    -webkit-filter: contrast(1.2);
+            filter: contrast(1.2);
+}
+
+@media screen and (max-width: 800px){
+    aside{
+       float: none;
+       margin-bottom: 0px;
+       width: 800px;
+       position: static;
+       height: auto;
+    }
+    aside li{
+        display: inline-flex;
+    }
+    aside ul{
+        padding-left: 13px;
+        height: 188px;
+        overflow: hidden;   
+    }
+    .noticia{
+        background-image: url(img-noticias/wimbledon-tablet.jpg);
+        height: 178px;
+    }
+    aside h2{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 480px){/*elimino el aside(seccion de noticias) en la version mobile*/
+    aside{
+        display: none;
+    }
+}
+/*---------------Footer----------*/
+footer{
+    width: var(--anchoPag);
+    background-color: var(--colorAzul);
+    margin-top: 50px;
+    height: 250px;
+    color:rgb(255, 255, 255);
+}
+footer p{
+    margin: auto;
+    width: 800px;
+    text-align: center;
+}
+@media screen and (max-width: 800px){/*modifico el footer*/
+    footer{
+        width: 800px;
+        height: 270px;
+        margin-top: 15px;
+    }
+    footer p{
+        width: 600px;
+       
+    }
+}
+@media screen and (max-width: 480px){/*modifico el footer*/
+    footer{
+        width: 480px;
+    }
+    footer p{
+        width: 440px;
+    }
+}
+footer ul{
+    width: 246px;
+    margin: 10px auto 10px auto;
+}
+footer ul>li{
+    display: inline-block;
+    margin: 5px;
+}
+.redes a{
+    background: url('img/sprite.png') left top no-repeat; display: inline-block; width: 48px; height: 48px; overflow: hidden; text-indent: -5000px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    -webkit-transition:all .5s;
+    -o-transition:all .5s;
+    -moz-transition:all .5s;
+    transition: all .5s;
+}
+.redes a:hover{
+    -webkit-transform: scale(1.4);
+       -moz-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+         -o-transform: scale(1.4);
+            transform: scale(1.4);
+    filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="1.3935000000000002 -0.35750000000000004 -0.03599999999999999 0 0 -0.10650000000000001 1.1575 -0.03599999999999999 0 0 -0.10650000000000001 -0.35750000000000004 1.4640000000000002 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: saturate(1.5);
+            filter: saturate(1.5);
+}
+.redes .insta{
+    background-position: -48px 0px;
+}
+.redes .linke{
+    background-position: -96px 0px;
+}
+.redes .yout{
+    background-position: -144px 0px;
+}
+.redes .email{
+    background-position: 0px 0px;
+}
+
+/*---------------------------------------Gracias-------------------------------------*/
+.gracias{
+    height: 80vh;
+    width: var(--anchoPag);
+    background: linear-gradient(-45deg, #0C2A70, #700C35, #01226F, #70530C, #07700D); /*triada de colores*/
+    background-size: 400% 400%;
+    position: relative;
+    animation: backanimate 10s ease-in-out infinite;
+}
+.gracias h2{
+    margin: 30px 0;
+    width: var(--anchoPag);
+    border-bottom: 0;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--colorRojo);
+    animation: textoSombra 5s ease-in-out infinite;
+}
+.gracias p{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+.gracias div p{
+    margin-top: 40px;
+}
+.gracias div ul{
+    width: 246px;
+    margin: 10px auto 10px auto;
+}
+.gracias div li{
+    display: inline-block;
+    margin: 5px;
+}
+
+@media screen and (max-width: 800px){
+    .gracias{
+        width: 800px;
+        height: 80vh;
+    }
+    .gracias h2{
+        width: 800px;
+        font-size: 50px;
+   
+    }
+}
+
+@media screen and (max-width: 480px){
+    .gracias{
+        width: 480px;
+    }
+    .gracias h2{
+        width: 480px;
+        font-size: 30px;
+    
+    }
+}
+@keyframes backanimate {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+@keyframes textoSombra {
+    0%{
+        text-shadow: #fff -5px -5px 8px;
+    }
+    50%{
+        text-shadow: #fff 5px 5px 12px;
+    }
+    100%{
+        text-shadow: #fff -5px -5px 8px;
+    }
+}
