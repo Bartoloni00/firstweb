@@ -1,1 +1,4 @@
-# firstweb
+# Mi primera web
+Hace mas de un año en primeros pasos en el mundo del diseño y programación web. Uno de mis mayores desafíos fue crear una web estática completamente responsive sin utilizar herramientas modernas como flexbox, grid o medidas relativas. Solo me apoyé en HTML, CSS y plugins de jQuery para lograrlo.
+Este proyecto me enseñó muchas cosas. Tuve que optimizar la velocidad de carga de la página, utilizar media queries y estructurar un HTML semántico, lo que permitiría que los motores de búsqueda, como Google, la encontraran de manera más efectiva.
+Fue un gran reto que me permitió adquirir habilidades valiosas en el mundo del diseño y programación web. Aprendí la importancia de estructurar un HTML semántico y utilizar técnicas de optimización para mejorar la velocidad de carga de la página. Este proyecto me impulsó a seguir explorando y creciendo en mi carrera.
